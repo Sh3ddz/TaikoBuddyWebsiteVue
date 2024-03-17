@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Calendar } from '@/components/ui/calendar'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { ref } from 'vue'
 
 const count = ref(0)
@@ -20,6 +21,8 @@ const accordionItems = [
 ]
 const date = ref(new Date())
 const mode = useColorMode()
+const hoverColor = ref('green')
+const itemList = ['green','red','blue']
 </script>
 
 <template>
@@ -45,34 +48,60 @@ const mode = useColorMode()
     </DropdownMenuContent>
   </DropdownMenu>
 
-  <Button @click="count++">Click me! {{ count }}</Button>
-  <Button variant="destructive">Click me</Button>
-  <Button variant="outline">Click me</Button>
-  <Button variant="secondary">Click me</Button>
-  <Button variant="ghost">Click me</Button>
+<!-- <div v-for="l in itemList">
+<Card @click="count++" class="hover:bg-sky-700 m-8">
+      <CardHeader>
+        <CardTitle :style="{color: l}">{{l}}</CardTitle>
+      </CardHeader>
+      <CardFooter>
+        last updated: (1/28/2021)
+      </CardFooter>
+    </Card>
+</div> -->
+<div class="flex m-8">
+    <Card @click="count++" class="card shadow-2xl text-center">
+      <CardHeader>
+        <CardTitle>TaikoBuddy</CardTitle>
+        <CardDescription>osu!Taiko AIO tool</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <img src="./res/TaikoBuddyIconFULL.png">
+      </CardContent>
+      <CardFooter>
+        last updated: (1/28/2021)
+      </CardFooter>
+    </Card>
 
-  <Accordion type="single" class="w-full" collapsible :default-value="defaultValue">
-    <AccordionItem v-for="item in accordionItems" :key="item.value" :value="item.value">
-      <AccordionTrigger>{{ item.title }}</AccordionTrigger>
-      <AccordionContent>
-        {{ item.content }}
-      </AccordionContent>
-    </AccordionItem>
-  </Accordion>
+    <Card @click="count++" class="card shadow-2xl text-center">
+      <CardHeader>
+        <CardTitle>OsuBuddy</CardTitle>
+        <CardDescription>osu!Standard AIO tool</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <img src="./res/OsuBuddyIconFULL.png">
+      </CardContent>
+      <CardFooter>
+        NOW AVAILABLE
+      </CardFooter>
+    </Card>
 
-  <Calendar v-model="date" class="rounded-md border" />
-  <Button>{{ date }}</Button>
-
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <Card @click="count++" class="card shadow-2xl text-center">
+      <CardHeader>
+        <CardTitle>AimBuddy</CardTitle>
+        <CardDescription>osu!Standard Aim Assist</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <img src="./res/AimBuddyIconFULL.png">
+      </CardContent>
+      <CardFooter>
+        last updated: (2/6/2021)
+      </CardFooter>
+    </Card>
   </div>
 
-  <HelloWorld msg="Vite + Vue" />
+  <Button @click="count++">Click me! {{ count }}</Button>
+
+<!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
 <style scoped>
