@@ -1,28 +1,16 @@
 <script setup lang="ts">
 
-import HelloWorld from './components/HelloWorld.vue'
-
 import { useColorMode } from '@vueuse/core'
 import { Icon } from '@iconify/vue'
 
 import { Button } from '@/components/ui/button'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Calendar } from '@/components/ui/calendar'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { ref } from 'vue'
 
 const count = ref(0)
-const defaultValue = 'item-1'
-const accordionItems = [
-  { value: 'item-1', title: 'Is it accessible?', content: 'Yes. It adheres to the WAI-ARIA design pattern.' },
-  { value: 'item-2', title: 'Is it unstyled?', content: 'Yes. It\'s unstyled by default, giving you freedom over the look and feel.' },
-  { value: 'item-3', title: 'Can it be animated?', content: 'Yes! You can use the transition prop to configure the animation.' },
-]
-const date = ref(new Date())
+
 const mode = useColorMode()
-const hoverColor = ref('green')
-const itemList = ['green','red','blue']
 </script>
 
 <template>
