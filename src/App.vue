@@ -1,11 +1,13 @@
 <template>
     <div id="app">
-      <h2>This is a Vue 3 starter project</h2>
+      <NavBar/>
+      <strong>Current route path:</strong> {{ $route.fullPath }}
       <router-view></router-view>
     </div>
 </template>
 
 <script lang="ts">
+  import NavBar from '@/components/NavBar.vue';
   export default 
   {
     name: "App",
@@ -27,4 +29,4 @@
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
-</style>
+</style>./components/NavBar.vue

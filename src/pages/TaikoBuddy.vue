@@ -11,9 +11,3 @@ export default
     <h1>TaikoBuddy</h1>
     <RouterLink to="/">Home</RouterLink>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>

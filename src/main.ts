@@ -3,26 +3,23 @@ import './style.css'
 import './assets/index.css'
 import App from './App.vue'
 
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter} from 'vue-router'
 import Home from './pages/Home.vue'
 import TaikoBuddy from './pages/TaikoBuddy.vue'
 import OsuBuddy from './pages/OsuBuddy.vue'
 import AimBuddy from './pages/AimBuddy.vue'
 
 const routes = [
-  { path: '/', component: Home},
-  { path: '/taikobuddy', component: TaikoBuddy},
-  { path: '/osubuddy', component: OsuBuddy },
-  { path: '/aimbuddy', component: AimBuddy },
+  { path: '/', name: 'home', component: Home},
+  { path: '/taikobuddy', name: 'taikobuddy', component: TaikoBuddy},
+  { path: '/osubuddy', name: 'osubuddy', component: OsuBuddy },
+  { path: '/aimbuddy', name: 'aimbuddy', component: AimBuddy },
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 })
-
-router.beforeEach((to, from, next) => {
-  next();
-});
 
 // createApp(App).use(router).mount('#app')
 

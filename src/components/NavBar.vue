@@ -57,6 +57,3 @@ const toggleMode = () => {
     }
 };
 </script>
-
-
-
