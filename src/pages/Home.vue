@@ -34,21 +34,21 @@ const cardList = ref([
     href: '/taikobuddy',
     description: 'osu!Taiko AIO tool',
     image: '/src/res/TaikoBuddyIconFULL.png',
-    lastUpdated: '1/28/2021'
+    lastUpdated: '1/28/2024'
   },
   {
     title: 'OsuBuddy',
     href: '/osubuddy',
     description: 'osu!Standard AIO tool',
     image: '/src/res/OsuBuddyIconFULL.png',
-    lastUpdated: 'NOW AVAILABLE'
+    lastUpdated: '3/8/2024'
   },
   {
     title: 'AimBuddy',
     href: '/aimbuddy',
     description: 'osu!Standard Aim Assist',
     image: '/src/res/AimBuddyIconFULL.png',
-    lastUpdated: '2/6/2021'
+    lastUpdated: '2/6/2024'
   }
 ])
 </script>
