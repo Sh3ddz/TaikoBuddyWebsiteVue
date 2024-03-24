@@ -26,11 +26,24 @@ body {
   margin: 0 !important;
   min-width: 320px;
   min-height: 100vh;
+  position: relative;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1{
+  font-size: 50px;
+}
+h2{
+    font-size: 40px;
+    margin: 20px 20%;
+    text-align: left;
+}
+h3{
+    font-size: 30px;
+}
+p{
+    font-size: 20px;
+    margin: 10px 20%;
+    text-align: left;
 }
 
 button {
@@ -82,6 +95,44 @@ button:focus-visible {
   font-size: 12px;
   margin: 0;
   text-align: left;
+}
+
+span{
+  color: lawngreen;
+}
+span2{
+  color: red;
+}
+span3{
+  color: green;
+}
+
+table{
+  margin: 10px auto 50px;
+  font-size: 20px;
+  border-collapse: collapse;
+  background-color: #292929;
+  text-indent: initial;
+  border-spacing: 2px;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  text-align: -webkit-left;
+  border-color: inherit;
+}
+tr:nth-child(even) {
+  background-color: #222222;
+}
+th, td {
+  padding: 10px;
+}
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -webkit-center;
+  width: 50%;
 }
 
 #app {

@@ -1,10 +1,8 @@
 <template>
-    <div id="app">
-      <NavBar/>
-      
-      <strong>Current route path:</strong> {{ $route.fullPath }}
-      <router-view></router-view>
-    </div>
+    <NavBar/>
+    
+    <!-- <strong>Current route path:</strong> {{ $route.fullPath }} -->
+    <router-view></router-view>
 </template>
 
 <script lang="ts">

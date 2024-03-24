@@ -16,14 +16,11 @@
         </RouterLink>
       </Card>
     </div>
-
-    <Button @click="count++">Click me! {{ count }}</Button>
   </div>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 
 const count = ref(0)
@@ -54,7 +51,4 @@ const cardList = ref([
 </script>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
-}
 </style>

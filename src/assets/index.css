@@ -76,3 +76,36 @@
     @apply bg-background text-foreground;
   }
 }
+
+.taikoBuddyDescription ul, .osuBuddyDescription ul, .aimBuddyDescription ul{
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 25%;
+  text-align: left;
+}
+.taikoBuddyDescription li, .osuBuddyDescription li, .aimBuddyDescription li{
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.taikoBuddyDescription button, .osuBuddyDescription button, .aimBuddyDescription button{
+  background: #5d8ffc;
+  color: #fff;
+  border: 1px solid #5d8ffc;
+  border-radius: 5px;
+  padding: 15px;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+}
+.taikoBuddyDescription button:hover, .osuBuddyDescription button:hover, .aimBuddyDescription button:hover{
+  background: #fff;
+  color: #5d8ffc;
+  border: 1px solid #5d8ffc;
+}
